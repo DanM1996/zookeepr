@@ -11,6 +11,8 @@ const app = express();
 
 // parse incoming string or array data
 app.use(express.urlencoded({ extended: true }));
+// provide css and javascript to the html file
+app.use(express.static('public'));
 // parse incoming JSON data
 app.use(express.json());
 function filterByQuery(query, animalsArray) {
@@ -115,6 +117,9 @@ app.post('/api/animals', (req, res) => {
     }
 });
 
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/index.html'));
+});
 app.listen(PORT, () => {
     console.log(`API server now on port ${PORT}!`);
 });
