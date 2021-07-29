@@ -136,6 +136,16 @@
         "anxious"
       ],
       "id": "13"
+    },
+    {
+      "name": "Jacob",
+      "species": "Jackalope",
+      "diet": "herbivore",
+      "personalityTraits": [
+        "anxious",
+        "loving"
+      ],
+      "id": "14"
     }
   ]
 }
